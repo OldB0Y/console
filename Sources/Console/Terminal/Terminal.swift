@@ -87,9 +87,9 @@ public class Terminal: ConsoleProtocol {
 
         var environment: [String: String] = [:]
         #if Xcode
-            let keys = ["SWIFT_EXEC", "HOME", "PATH", "TOOLCHAINS", "DEVELOPER_DIR", "LLVM_PROFILE_FILE"]
+            let keys = ["SWIFT_EXEC", "HOME", "PATH", "HTTPS_PROXY", "HTTP_PROXY", "TOOLCHAINS", "DEVELOPER_DIR", "LLVM_PROFILE_FILE"]
         #else
-            let keys = ["SWIFT_EXEC", "HOME", "PATH", "SDKROOT", "TOOLCHAINS", "DEVELOPER_DIR", "LLVM_PROFILE_FILE"]
+            let keys = ["SWIFT_EXEC", "HOME", "PATH", "HTTPS_PROXY", "HTTP_PROXY", "SDKROOT", "TOOLCHAINS", "DEVELOPER_DIR", "LLVM_PROFILE_FILE"]
         #endif
 
         func getenv(_ key: String) -> String? {
